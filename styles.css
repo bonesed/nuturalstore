@@ -1,0 +1,136 @@
+/* ベーススタイル */
+body {
+    margin: 0;
+    font-family: "Hiragino Sans", "Helvetica Neue", Arial, sans-serif;
+    background-color: #f5f5dc; /* ナチュラルなベージュ系 */
+    color: #333;
+  }
+  
+  header {
+    background-color: #eedfcb;
+    padding: 20px;
+    text-align: center;
+  }
+  header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+  }
+  header p {
+    margin: 8px 0 0;
+    font-size: 1rem;
+  }
+  
+  /* 商品一覧グリッド */
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .product-card {
+    background-color: #fffaf0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: box-shadow 0.2s ease;
+  }
+  .product-card:hover {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  }
+  .product-card img {
+    width: 100%;
+    display: block;
+  }
+  .product-details {
+    padding: 12px;
+  }
+  .product-name {
+    font-size: 1.2rem;
+    margin: 0 0 4px;
+  }
+  .product-price {
+    font-weight: bold;
+    color: #b06030;
+    margin: 0;
+  }
+  
+  /* モーダル全体 */
+  .modal {
+    display: none; /* 初期状態は非表示 */
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* スクロール対応 */
+    background-color: rgba(0,0,0,0.5); /* 背景の半透明 */
+    align-items: center;
+    justify-content: center;
+  }
+  /* モーダルのコンテンツ */
+  .modal-content {
+    background-color: #fffaf0;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #999;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+  }
+  .close-btn {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+  }
+  .close-btn:hover {
+    color: #b06030;
+  }
+  .modal img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto 16px;
+  }
+  .modal h2 {
+    margin-top: 0;
+    margin-bottom: 8px;
+  }
+  .modal p {
+    margin: 4px 0;
+  }
+  .purchase-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #b06030;
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-top: 12px;
+    cursor: pointer;
+  }
+  .purchase-btn:hover {
+    background-color: #8c4824;
+  }
+  
+  /* レスポンシブ対応 */
+  @media screen and (max-width: 600px) {
+    header h1 {
+      font-size: 1.4rem;
+    }
+    .product-name {
+      font-size: 1rem;
+    }
+    .modal-content {
+      width: 95%;
+    }
+  }
+  
